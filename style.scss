@@ -84,9 +84,16 @@ main {
     font: bold;
 }
 
-.resultado {
+#resultado {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 40px;
+    font: bold;
+    margin: auto auto;
+}
+
+#resultado_divisao {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
     font: bold;
     margin: auto auto;
 }

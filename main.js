@@ -1,4 +1,38 @@
-import "./style.scss";
+import "./style.scss"
+
+const gerenciadenomes = require("./js/gerenciadenomes")
+
+const botao = document.querySelector("#botao_concatenar")
+botao.addEventListener("click", cannomes)
+
+function cannomes() {
+const nome = document.querySelector("#nome").value
+const sobrenome = document.querySelector("#sobrenome").value
+
+const concatenar = gerenciadenomes.juntardoisnomes(nome, sobrenome)
+const resultado = document.querySelector("#resultado")
+
+resultado.innerHTML = concatenar
+
+}
+
+const dividirdoisnumeros = require("./js/calculadora")
+
+const dividir_num = document.querySelector("#botao_dividir")
+dividir_num.addEventListener("click", numeros)
+
+function numeros() {
+    const numero_div1 = document.querySelector("#numero_dividir1").value
+    const numero_div2 = document.querySelector("#numero_dividir2").value
+
+    const dividir_numeros = dividirdoisnumeros.dividir(numero_div1, numero_div2)
+    const resultado_dividir = document.querySelector("#resultado_divisao")
+
+    resultado_dividir.innerHTML = dividir_numeros
+
+    const formattedNumber = (dividir_numeros).toFixed(2).replace(/[.,]00$/, "");
+    dividir_numeros.innerHTML = formattedNumber
+}
 
 
 
@@ -6,37 +40,3 @@ import "./style.scss";
 
 
 
-// document.querySelector("#botao_dividir").addEventListener("click", eldividir)
-
-// function eldividir() {
-//     const num_div1 = document.querySelector("#numero_dividir1")
-//     const num_div2 = document.querySelector("#numero_dividir2")
-
-//     const valor_div1 = Number(num_div1.value)
-//     const valor_div2 = Number(num_div2.value)
-    
-//     if (valor_div1 == "" || valor_div2 == "") {
-//         alert("Não pode valor vazio")
-//         return
-//     }
-//     if (valor_div2 == 0) {
-//         alert("Não pode valor zero")
-//         return
-//     }
-
-// }
-
-// const resultado_div = dividir(valor_div1, valor_div2)
-
-//     const resultado_div1 = document.querySelector("#resultado_div")
-
-//     resultado_div1.innerHTML = resultado_div
-
-//     function dividir(numero_dividir1, numero_dividir2) {
-//         const resultado_div = numero_dividir1 / numero_dividir2
-//         return resultado_div
-    
-          
-//     }
-
-   
