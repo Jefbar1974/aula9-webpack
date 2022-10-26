@@ -1,5 +1,7 @@
 import "./style.scss"
 
+// Concatenar nomes
+
 const gerenciadenomes = require("./js/gerenciadenomes")
 
 const botao = document.querySelector("#botao_concatenar")
@@ -13,8 +15,10 @@ const concatenar = gerenciadenomes.juntardoisnomes(nome, sobrenome)
 const resultado = document.querySelector("#resultado")
 
 resultado.innerHTML = concatenar
-
 }
+
+
+// Dividir numeros
 
 const dividirdoisnumeros = require("./js/calculadora")
 
@@ -32,6 +36,7 @@ function numeros() {
 
     const formattedNumber = (dividir_numeros).toFixed(2).replace(/[.,]00$/, "");
     dividir_numeros.innerHTML = formattedNumber
+ 
 }
 
 
